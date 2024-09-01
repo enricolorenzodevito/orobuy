@@ -1,0 +1,18 @@
+
+<h1>Create Invoice</h1>
+<form action="/invoices/new" method="POST">
+    <label for="customer">Customer:</label>
+    <select id="customer" name="customer" required>
+        <% customers.forEach(customer => { %>
+            <option value="<%= customer._id %>"><%= customer.name %></option>
+        <% }); %>
+    </select>
+
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount" required>
+
+    <label for="items">Items (description, quantity, price):</label>
+    <textarea id="items" name="items" required></textarea>
+
+    <button type="submit">Create Invoice</button>
+</form>

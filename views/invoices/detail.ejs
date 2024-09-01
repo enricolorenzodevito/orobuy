@@ -1,0 +1,11 @@
+
+<h1>Invoice Details</h1>
+<p>Customer: <%= invoice.customer.name %></p>
+<p>Amount: <%= invoice.amount %></p>
+<p>Date: <%= invoice.date.toDateString() %></p>
+<h2>Items</h2>
+<ul>
+    <% invoice.items.forEach(item => { %>
+        <li><%= item.description %> - Quantity: <%= item.quantity %>, Price: <%= item.price %></li>
+    <% }); %>
+</ul>

@@ -1,0 +1,12 @@
+
+<h1>Invoices</h1>
+<a href="/invoices/new">Create New Invoice</a>
+<ul>
+    <% invoices.forEach(invoice => { %>
+        <li>
+            <a href="/invoices/<%= invoice._id %>">
+                Invoice #<%= invoice._id %> - Amount: <%= invoice.amount %> - Customer: <%= invoice.customer.name %>
+            </a>
+        </li>
+    <% }); %>
+</ul>
