@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: invoice-app
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://enricolorenzodevito:S3d5f7l011@orobuy.a0xdp.mongodb.net/orobuy
